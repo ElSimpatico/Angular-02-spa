@@ -15,7 +15,7 @@ export class HeroesComponent implements OnInit {
               private activedRoute: ActivatedRoute) { 
 
   this.activedRoute.params.subscribe(params => {
-    this.heroes = params.termino ? this._heroesService.buscarHeroes(params.termino) : this._heroesService.getHeroes();
+    this.heroes = this._heroesService.getHeroes();
   });
 }
 
